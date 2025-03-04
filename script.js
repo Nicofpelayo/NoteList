@@ -1,11 +1,9 @@
 const updateNotes = () => {
   const notes = JSON.parse(localStorage.getItem("notes"));
 
-  console.log(notes);
   if (notes) {
     const noteList = document.getElementById("note-list");
     noteList.innerHTML = "";
-    console.log(typeof notes);
     notes.forEach((element) => createNote(element));
   }
 };
